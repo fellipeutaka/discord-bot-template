@@ -1,12 +1,8 @@
-import { REST, Routes, SlashCommandBuilder } from "discord.js";
+import { REST, Routes } from "discord.js";
 import { config } from "./config";
 import commandsModules from "./commands";
 
-const commands: SlashCommandBuilder[] = [];
-
-Object.values(commandsModules).forEach((command) =>
-  commands.push(command.data)
-);
+const commands = Object.values(commandsModules).map((command) => command.data);
 
 const rest = new REST({ version: "10" }).setToken(config.DISCORD_TOKEN);
 
