@@ -3,9 +3,10 @@ import { config } from "./config";
 import commandsModules from "./commands";
 
 const commands: SlashCommandBuilder[] = [];
-for (const module of Object.values(commandsModules)) {
-  commands.push(module.data);
-}
+
+Object.values(commandsModules).forEach((command) =>
+  commands.push(command.data)
+);
 
 const rest = new REST({ version: "10" }).setToken(config.DISCORD_TOKEN);
 
