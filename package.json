@@ -7,10 +7,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
+    "dev": "tsnd -r ./src/deploy-commands.ts --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
     "build": "babel src --extensions .ts --out-dir dist --copy-files --no-copy-ignored",
     "start": "node dist/index.js",
-    "deploy:commands": "yarn build && node dist/deploy-commands.js",
+    "deploy:commands": "node dist/deploy-commands.js",
     "lint": "eslint . --ext ts"
   },
   "dependencies": {
