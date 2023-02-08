@@ -1,6 +1,7 @@
 import { Client } from "discord.js";
 import { config } from "./config";
 import commands from "./commands";
+import { deployCommands } from "./deploy-commands";
 
 export const client = new Client({
   intents: ["Guilds", "GuildMessages", "DirectMessages"],
@@ -8,6 +9,10 @@ export const client = new Client({
 
 client.once("ready", () => {
   console.log("Discord bot is ready! 🤖");
+});
+
+client.on("guildCreate", async (guild) => {
+  await deployCommands({ guildId: guild.id });
 });
 
 client.on("interactionCreate", async (interaction) => {
