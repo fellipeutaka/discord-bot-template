@@ -1,8 +1,8 @@
 import { REST, Routes } from "discord.js";
 import { config } from "./config";
-import commandsModules from "./commands";
+import { commands } from "./commands";
 
-const commands = Object.values(commandsModules).map((command) => command.data);
+const commandsData = Object.values(commands).map((command) => command.data);
 
 const rest = new REST({ version: "10" }).setToken(config.DISCORD_TOKEN);
 
@@ -17,7 +17,7 @@ export async function deployCommands({ guildId }: DeployCommandsProps) {
     await rest.put(
       Routes.applicationGuildCommands(config.DISCORD_CLIENT_ID, guildId),
       {
-        body: commands,
+        body: commandsData,
       }
     );
 

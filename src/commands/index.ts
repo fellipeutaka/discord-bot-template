@@ -1,7 +1,5 @@
 import * as ping from "./ping";
 
-const commands = {
+export const commands = {
   ping,
 };
-
-export default commands;

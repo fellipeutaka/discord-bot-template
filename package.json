@@ -10,7 +10,8 @@
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "build": "tsup src/index.ts --minify",
-    "lint": "eslint . --ext ts"
+    "format": "prettier --write \"**/*.{json,ts}\"",
+    "lint": "eslint . --ext ts --fix"
   },
   "dependencies": {
     "discord.js": "^14.7.1",
@@ -31,4 +32,3 @@
     "typescript": "^4.9.5"
   }
 }
-
