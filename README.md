@@ -66,7 +66,7 @@ $ npm install
 # If you are using Yarn
 $ yarn install
 
-# If you are using PNPM (current package manager)
+# If you are using PNPM
 $ pnpm install
 ```
 
@@ -79,7 +79,7 @@ Then insert your Discord Token and Discord Client ID. Great! Now you just need t
 $ npm run dev
 # If you are using Yarn
 $ yarn dev
-# If you are using PNPM (current package manager)
+# If you are using PNPM
 $ pnpm dev
 ```
 
