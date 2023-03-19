@@ -1,14 +1,22 @@
 {
   "name": "discord-bot-template",
   "version": "1.0.0",
+  "description": "A Discord bot boilerplate including TypeScript and ESLint.",
   "author": {
+    "email": "fellipeutaka@gmail.com",
     "name": "Fellipe Utaka"
   },
-  "main": "dist/index.js",
   "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/fellipeutaka/discord-bot-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fellipeutaka/discord-bot-template.git"
+  },
+  "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "start": "node dist/index.js",
+    "start": "node .",
     "build": "tsup src/index.ts --minify",
     "format": "prettier --write \"**/*.{json,ts}\"",
     "lint": "eslint . --ext ts --fix"
