@@ -57,7 +57,7 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/fellipeutaka/cook.git
+$ git clone https://github.com/fellipeutaka/discord-bot-template.git
 
 # Install dependencies
 # If you are using NPM
